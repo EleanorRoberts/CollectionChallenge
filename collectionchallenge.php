@@ -18,7 +18,7 @@ require_once 'collectiondb.php';
 foreach ($pokemon as $poke) {
     echo "<div>";
     echo "<h2>{$poke['name']}</h2>";
-    if ($poke['type2'] == 'N/A') {
+    if ($poke['type2'] === "") {
         echo "<p>{$poke['type1']}</p>";
     } else {
         echo "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
