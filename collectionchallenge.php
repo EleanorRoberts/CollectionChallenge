@@ -4,9 +4,12 @@ $db = new PDO('mysql:host=db; dbname=pokemon', 'root', 'password' );
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $query = $db->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats`;");
 $query->execute();
-$result = $query->fetchAll();
+$pokemon = $query->fetchAll();
 
-var_dump($result);
+echo '<pre>';
+var_dump($pokemon);
+echo '</pre>';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +23,24 @@ var_dump($result);
 
 </head>
 <body>
+<h1>Pokemonz</h1>
+
+<?php
+foreach ($pokemon as $poke) {
+    echo "<div>";
+    echo "<h2>{$poke['name']}</h2>";
+    echo "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+    echo "<ul>";
+    echo "<li>HP: {$poke['hp']}</li>";
+    echo "<li>Attack: {$poke['attack']}</li>";
+    echo "<li>Defense: {$poke['defense']}</li>";
+    echo "<li>SP. Attack: {$poke['spAttack']}</li>";
+    echo "<li>SP. Defense: {$poke['spDefense']}</li>";
+    echo "<li>Speed: {$poke['speed']}</li>";
+    echo "</div>";
+}
+
+?>
 
 </body>
 </html>
