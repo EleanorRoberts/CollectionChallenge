@@ -6,4 +6,8 @@ $getPokemon = $db->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`typ
 $getPokemon->execute();
 $pokemon = $getPokemon->fetchAll();
 
-//$insertNewPokemon = $db->prepare("INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (``, ``, ``, ``, ``, ``, ``, ``);");
+
+if (isset($_POST['name'])) {
+    $insertNewPokemon = $db->prepare("INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (`{$_POST['name']}`, `{$_POST['type1']}`, `{$_POST['type2']}`, `{$_POST['hp']}`, `{$_POST['attack']}`, `{$_POST['defense']}`, `{$_POST['spAttack']}`, `{$_POST['spDefense']}`, `{$_POST['speed']}`);");
+    $insertNewPokemon->execute();
+}
