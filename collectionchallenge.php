@@ -6,10 +6,6 @@ $query = $db->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, 
 $query->execute();
 $pokemon = $query->fetchAll();
 
-echo '<pre>';
-var_dump($pokemon);
-echo '</pre>';
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,7 +25,11 @@ echo '</pre>';
 foreach ($pokemon as $poke) {
     echo "<div>";
     echo "<h2>{$poke['name']}</h2>";
-    echo "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+    if ($poke['type2'] == 'N/A') {
+        echo "<p>{$poke['type1']}</p>";
+    } else {
+        echo "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+    }
     echo "<ul>";
     echo "<li>HP: {$poke['hp']}</li>";
     echo "<li>Attack: {$poke['attack']}</li>";
