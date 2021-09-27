@@ -8,7 +8,6 @@ $pokemon = $getPokemon->fetchAll();
 
 
 if (isset($_POST['name'])) {
-    //if one type, add 'N/A' for type 2
     $insertNewPokemon = $db->prepare("INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (:name, :type1, :type2, :hp, :attack, :defense, :spAttack, :spDefense, :speed);");
     $insertNewPokemon->bindParam(':name', $_POST['name']);
     $insertNewPokemon->bindParam(':type1', $_POST['type1']);
