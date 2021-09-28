@@ -59,7 +59,10 @@ function addStyle(): String {
     return $input;
 }
 
-function checkNew($database) {
+/** Checks to see if a new pokemon is being added
+ * @param PDO $database
+ */
+function checkNew(PDO $database) {
     if (isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed'])) {
         $insertNewPokemon = $database->prepare('INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (:name, :type1, :type2, :hp, :attack, :defense, :spAttack, :spDefense, :speed);');
         $ifExecute = $insertNewPokemon->execute([
