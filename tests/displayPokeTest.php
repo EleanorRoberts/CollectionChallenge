@@ -54,6 +54,4 @@ class displayPokeTest extends TestCase
 
         $case = displayPoke($input);
     }
-
-
 }
