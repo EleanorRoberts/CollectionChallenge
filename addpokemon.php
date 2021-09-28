@@ -7,7 +7,7 @@ require_once "collectiondb.php";
 <head>
     <meta charset="UTF-8" />
     <title>Pokemon Collection</title>
-	<link rel="stylesheet" href="normalize.css" />
+    <?php addStyle(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>

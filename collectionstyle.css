@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", Papyrus;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 9vw;
+    margin: 0px;
+    padding: 20px 0px 10px 0px;
+}
+
+.pokeCard {
+    margin: 10px;
+    padding: 10px 30px;
+    width: 30%;
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 10%;
+}
+
+.pokeCards {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+body {
+    background-color: lightgrey;
+}
