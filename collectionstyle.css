@@ -31,3 +31,9 @@ h1 {
 body {
     background-color: lightgrey;
 }
+
+a {
+    background-color: white;
+    padding: 10%;
+    color: darkslateblue;
+}

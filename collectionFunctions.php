@@ -69,12 +69,12 @@ function checkNew(PDO $database) {
             ':name' => $_POST['name'],
             ':type1' => $_POST['type1'],
             ':type2' => $_POST['type2'],
-            ':hp' => $_POST['hp'],
-            ':attack' => $_POST['attack'],
-            ':defense' => $_POST['defense'],
-            ':spAttack' => $_POST['spAttack'],
-            ':spDefense' => $_POST['spDefense'],
-            ':speed' => $_POST['speed']
+            ':hp' => is_numeric($_POST['hp']),
+            ':attack' => is_numeric($_POST['attack']),
+            ':defense' => is_numeric($_POST['defense']),
+            ':spAttack' => is_numeric($_POST['spAttack']),
+            ':spDefense' => is_numeric($_POST['spDefense']),
+            ':speed' => is_numeric($_POST['speed'])
         ]);
         if ($ifExecute) {
             header('Location: collectionchallenge.php');
