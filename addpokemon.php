@@ -1,6 +1,6 @@
 <?php
-require_once "collectionfunctions.php";
-require_once "collectiondb.php";
+require_once 'collectionfunctions.php';
+require_once 'collectiondb.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">

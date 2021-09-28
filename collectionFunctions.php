@@ -4,7 +4,7 @@
  * @param array $pokemon
  * @return String
  */
-function displayPoke(Array $pokemon) : String {
+function displayPoke(Array $pokemon): String {
     $output = "";
     foreach ($pokemon as $poke) {
         $output .= "<div class='pokeCard'>";
@@ -14,24 +14,24 @@ function displayPoke(Array $pokemon) : String {
         } else {
             $output .= "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
         }
-        $output .= "<ul>";
+        $output .= '<ul>';
         $output .= "<li>HP: {$poke['hp']}</li>";
         $output .= "<li>Attack: {$poke['attack']}</li>";
         $output .= "<li>Defense: {$poke['defense']}</li>";
         $output .= "<li>Sp. Attack: {$poke['spAttack']}</li>";
         $output .= "<li>Sp. Defense: {$poke['spDefense']}</li>";
         $output .= "<li>Speed: {$poke['speed']}</li>";
-        $output .= "</div>";
+        $output .= '</div>';
     }
     return $output;
 }
 
 /** Connects to a database, determined by db name
- * @param $database
+ * @param String $database
  * @return PDO
  */
-function connectToDB(String $database) : PDO {
-    $dbConnection = new PDO("mysql:host=db; dbname={$database}", "root", "password" );
+function connectToDB(String $database): PDO {
+    $dbConnection = new PDO("mysql:host=db; dbname={$database}", 'root', 'password' );
     $dbConnection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $dbConnection;
 }
@@ -40,12 +40,15 @@ function connectToDB(String $database) : PDO {
  * @param PDO $database
  * @return array
  */
-function collectData(PDO $database) : Array {
-    $getPokemon = $database->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats`;");
+function collectData(PDO $database): Array {
+    $getPokemon = $database->prepare('SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats`;');
     $getPokemon->execute();
     return $getPokemon->fetchAll();
 }
 
+/** Connects file to all related style sheets
+ *
+ */
 function addStyle() {
     echo "<link rel='preconnect' href='https://fonts.googleapis.com' />";
     echo "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />";
