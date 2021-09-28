@@ -1,6 +1,5 @@
 <?php
 require_once 'collectionfunctions.php';
-require_once 'collectiondb.php';
 $db = connectToDB('pokemon');
 $pokemon = collectData($db);
 ?>
@@ -9,7 +8,7 @@ $pokemon = collectData($db);
 <head>
     <meta charset="UTF-8" />
     <title>Pokemon Collection</title>
-    <?php addStyle(); ?>
+    <?php echo addStyle(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
