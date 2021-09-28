@@ -46,13 +46,15 @@ function collectData(PDO $database): Array {
     return $getPokemon->fetchAll();
 }
 
-/** Connects file to all related style sheets
- *
+/** Links page to style sheets
+ * @return String
  */
-function addStyle() {
-    echo "<link rel='preconnect' href='https://fonts.googleapis.com' />";
-    echo "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />";
-    echo "<link href='https://fonts.googleapis.com/css2?family=Nunito&display=swap' rel='stylesheet' />";
-    echo "<link rel='stylesheet' href='normalize.css' />";
-    echo "<link rel='stylesheet' href='collectionstyle.css' />";
+function addStyle(): String {
+    $input = '';
+    $input .= "<link rel='preconnect' href='https://fonts.googleapis.com' />";
+    $input .= "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />";
+    $input .= "<link href='https://fonts.googleapis.com/css2?family=Nunito&display=swap' rel='stylesheet' />";
+    $input .= "<link rel='stylesheet' href='normalize.css' />";
+    $input .= "<link rel='stylesheet' href='collectionstyle.css' />";
+    return $input;
 }
