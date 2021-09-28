@@ -1,6 +1,7 @@
 <?php
 require_once "collectionfunctions.php";
 require_once "collectiondb.php";
+$pokemon = collectData($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">

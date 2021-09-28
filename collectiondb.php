@@ -1,7 +1,6 @@
 <?php
 
 $db = connectToDB("pokemon");
-$pokemon = collectData($db);
 
 if (isset($_POST["name"])) {
     $insertNewPokemon = $db->prepare("INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (:name, :type1, :type2, :hp, :attack, :defense, :spAttack, :spDefense, :speed);");
