@@ -1,6 +1,6 @@
 <?php
-require_once 'collectiondb.php';
-require_once 'collectionfunctions.php';
+require_once "collectionfunctions.php";
+require_once "collectiondb.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +8,7 @@ require_once 'collectionfunctions.php';
     <meta charset="UTF-8" />
     <title>Pokemon Collection</title>
 
-    <!--	<link rel="stylesheet" href="normalize.css" />-->
+    <link rel="stylesheet" href="normalize.css" />
     <!--	<link rel="stylesheet" href="xxx.css" />-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,7 +16,7 @@ require_once 'collectionfunctions.php';
 <body>
 <h1>Pokemonz</h1>
 <?php
-displayPoke($pokemon);
+echo displayPoke($pokemon);
 ?>
 <a href="addpokemon.php">Add New Pokemon</a>
 </body>

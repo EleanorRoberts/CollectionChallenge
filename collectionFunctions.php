@@ -1,21 +1,47 @@
 <?php
 
-function displayPoke($pokemon) {
+/** Displays each pokemon and stats
+ * @param array $pokemon
+ * @return String
+ */
+function displayPoke(Array $pokemon) : String {
+    $output = "";
     foreach ($pokemon as $poke) {
-        echo "<div>";
-        echo "<h2>{$poke['name']}</h2>";
-        if ($poke['type2'] === "") {
-            echo "<p>{$poke['type1']}</p>";
+        $output .= "<div>";
+        $output .= "<h2>{$poke['name']}</h2>";
+        if ($poke["type2"] === "") {
+            $output .= "<p>{$poke['type1']}</p>";
         } else {
-            echo "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+            $output .= "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
         }
-        echo "<ul>";
-        echo "<li>HP: {$poke['hp']}</li>";
-        echo "<li>Attack: {$poke['attack']}</li>";
-        echo "<li>Defense: {$poke['defense']}</li>";
-        echo "<li>SP. Attack: {$poke['spAttack']}</li>";
-        echo "<li>SP. Defense: {$poke['spDefense']}</li>";
-        echo "<li>Speed: {$poke['speed']}</li>";
-        echo "</div>";
+        $output .= "<ul>";
+        $output .= "<li>HP: {$poke['hp']}</li>";
+        $output .= "<li>Attack: {$poke['attack']}</li>";
+        $output .= "<li>Defense: {$poke['defense']}</li>";
+        $output .= "<li>Sp. Attack: {$poke['spAttack']}</li>";
+        $output .= "<li>Sp. Defense: {$poke['spDefense']}</li>";
+        $output .= "<li>Speed: {$poke['speed']}</li>";
+        $output .= "</div>";
     }
+    return $output;
+}
+
+/** Connects to a database, determined by db name
+ * @param $database
+ * @return PDO
+ */
+function connectToDB(String $database) : PDO {
+    $dbConnection = new PDO("mysql:host=db; dbname={$database}", "root", "password" );
+    $dbConnection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    return $dbConnection;
+}
+
+/** Collects all pokemon values from pokemon database
+ * @param PDO $database
+ * @return array
+ */
+function collectData(PDO $database) : Array {
+    $getPokemon = $database->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats`;");
+    $getPokemon->execute();
+    return $getPokemon->fetchAll();
 }
