@@ -1,6 +1,7 @@
 <?php
 require_once "collectionfunctions.php";
 require_once "collectiondb.php";
+$db = connectToDB("pokemon");
 $pokemon = collectData($db);
 ?>
 <!DOCTYPE html>
