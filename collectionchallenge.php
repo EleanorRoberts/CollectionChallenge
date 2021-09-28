@@ -18,6 +18,11 @@ $pokemon = collectData($db);
     echo displayPoke($pokemon);
     ?>
 </section>
-<a href="addpokemon.php">Add New Pokemon</a>
+<section>
+    <a href="addpokemon.php" class="addPoke">Add New Pokemon</a>
+</section>
+<footer class="footer">
+    <p>Nova Inc. Ltd</p>
+</footer>
 </body>
 </html>
