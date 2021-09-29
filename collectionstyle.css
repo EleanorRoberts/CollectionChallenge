@@ -31,14 +31,18 @@ ul {
     padding: 0px;
 }
 
-.edit {
+.edit, .delete {
      background-color: white;
-     padding: 30px;
-     margin: 20px auto;
+     padding: 5px;
+     margin: 10px 10px;
      color: darkslateblue;
      text-decoration: none;
-     border-radius: 20px;
+     border-radius: 5px;
      text-align: center;
+}
+
+.speed {
+    margin-bottom: 10px;
 }
 
 .pokeCard {

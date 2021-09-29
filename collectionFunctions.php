@@ -20,7 +20,7 @@ function displayPoke(Array $pokemon): String {
         $output .= "<li>Defense: {$poke['defense']}</li>";
         $output .= "<li>Sp. Attack: {$poke['spAttack']}</li>";
         $output .= "<li>Sp. Defense: {$poke['spDefense']}</li>";
-        $output .= "<li>Speed: {$poke['speed']}</li>";
+        $output .= "<li class='speed'>Speed: {$poke['speed']}</li>";
         $output .= "<a href='#' class='edit'>Edit</a>";
         $output .= "<a href='#' class='delete'>Delete</a>";
         $output .= '</div>';
