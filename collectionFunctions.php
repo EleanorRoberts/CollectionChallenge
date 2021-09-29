@@ -81,8 +81,7 @@ function checkNew(PDO $database) {
                 header('Location: collectionchallenge.php');
             }
         } else {
-            echo "Unable to add Pokemon to the collection";
+            echo "<div class='error'>Unable to add Pokemon to the collection</div>";
         }
     }
-    var_dump($_POST);
 }

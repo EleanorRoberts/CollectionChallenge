@@ -1,6 +1,7 @@
 <?php
 require_once 'collectionfunctions.php';
 $db = connectToDB('pokemon');
+checkNew($db);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +24,6 @@ $db = connectToDB('pokemon');
     <label for="spDefense">Sp. Defense <input type="number" name="spDefense" required/></label>
     <label for="speed">Speed <input type="number" name="speed" required/></label>
     <input type="submit" name="submit" />
-    <?php checkNew($db);
-    ?>
 </form>
 </body>
 </html>
