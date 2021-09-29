@@ -22,13 +22,23 @@ footer {
     text-align: end;
 }
 
+body {
+    background-color: lightgrey;
+}
+
 ul {
     list-style-type: none;
     padding: 0px;
 }
 
-body {
-    background-color: lightgrey;
+.edit {
+     background-color: white;
+     padding: 30px;
+     margin: 20px auto;
+     color: darkslateblue;
+     text-decoration: none;
+     border-radius: 20px;
+     text-align: center;
 }
 
 .pokeCard {
@@ -58,3 +68,4 @@ body {
     text-align: center;
     font-size: 20px;
 }
+
