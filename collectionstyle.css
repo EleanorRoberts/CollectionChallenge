@@ -18,6 +18,7 @@ section, footer {
 
 footer {
     color: white;
+    margin-top: 10px;
     border-top: 1px solid darkgray;
     text-align: end;
 }
@@ -77,3 +78,13 @@ body {
     font-size: 20px;
 }
 
+form label {
+    display: block;
+    margin: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    .pokeCard {
+        width: 80%;
+    }
+}

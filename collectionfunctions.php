@@ -7,7 +7,7 @@
 function displayPoke(Array $pokemon): String {
     $output = "";
     foreach ($pokemon as $poke) {
-        $output .= "<div class='pokeCard'";
+        $output .= "<div class='pokeCard'>";
         $output .= "<h2>{$poke['name']}</h2>";
         if ($poke["type2"] === "") {
             $output .= "<p>{$poke['type1']}</p>";
@@ -53,7 +53,7 @@ function collectData(PDO $database): Array {
  * @return array
  */
 function getPoke(PDO $database): Array {
-    $getPokemon = $database->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` WHERE `id` = '{$_GET['id']}';");
+    $getPokemon = $database->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` WHERE `id` = '{$_GET['id']}' AND `deleted` = 0;");
     $getPokemon->execute();
     return $getPokemon->fetch();
 }
