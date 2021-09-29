@@ -127,7 +127,10 @@ function editPoke(PDO $database) {
     }
 }
 
-function deletePoke($database) {
+/** Soft delete Pokémon record and refresh page to show undeleted pokemon
+ * @param PDO $database
+ */
+function deletePoke(PDO $database) {
     $deletePokemon = $database->prepare("UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id LIMIT 1;");
     $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
     if ($ifExecute) {
