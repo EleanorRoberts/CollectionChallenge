@@ -22,7 +22,7 @@ function displayPoke(Array $pokemon): String {
         $output .= "<li>Sp. Defense: {$poke['spDefense']}</li>";
         $output .= "<li class='speed'>Speed: {$poke['speed']}</li>";
         $output .= "<a href='editpokemon.php?id={$poke['id']}' class='edit'>Edit</a>";
-        $output .= "<a href='#' class='delete'>Delete</a>";
+        $output .= "<a href='deletePokemon.php?id={$poke['id']}' class='delete'>Delete</a>";
         $output .= '</div>';
     }
     return $output;
@@ -43,7 +43,7 @@ function connectToDB(String $database): PDO {
  * @return array
  */
 function collectData(PDO $database): Array {
-    $getPokemon = $database->prepare('SELECT `stats`.`id`, `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats`;');
+    $getPokemon = $database->prepare("SELECT `stats`.`id`, `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` WHERE `deleted` = 0;");
     $getPokemon->execute();
     return $getPokemon->fetchAll();
 }
@@ -71,14 +71,13 @@ function addStyle(): String {
     return $input;
 }
 $postIsSet = isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed']);
-$areNumbers = is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed']);
 
 /** Checks to see if a new Pokémon is being added
  * @param PDO $database
  */
 function checkNew(PDO $database) {
     if ($postIsSet) {
-        if ($areNumbers) {
+        if (is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed'])) {
             $insertNewPokemon = $database->prepare('INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (:name, :type1, :type2, :hp, :attack, :defense, :spAttack, :spDefense, :speed);');
             $ifExecute = $insertNewPokemon->execute([
                 ':name' => $_POST['name'],
@@ -105,7 +104,7 @@ function checkNew(PDO $database) {
  */
 function editPoke(PDO $database) {
     if ($postIsSet) {
-        if ($areNumbers) {
+        if (is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed'])) {
             $editPokemon = $database->prepare("UPDATE `stats` SET `name` = :name, `type1` = :type1, `type2` = :type2, `hp` = :hp, `attack` = :attack, `defense` = :defense, `spAttack` = :spAttack, `spDefense` = :spDefense, `speed` = :speed WHERE `id` = :id LIMIT 1;");
             $ifExecute = $editPokemon->execute([
                 ':id' => $_GET['id'],
@@ -128,6 +127,13 @@ function editPoke(PDO $database) {
     }
 }
 
-function deletePoke() {
-    ///delete poke
+function deletePoke($database) {
+    $deletePokemon = $database->prepare("UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id LIMIT 1;");
+    $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
+    if ($ifExecute) {
+        header('Location: collectionchallenge.php');
+    } else {
+        echo "<div class='error'>Unable to delete Pokémon from the collection</div>";
+        echo "<a href='collectionchallenge.php'>Go Back</a>";
+    }
 }
