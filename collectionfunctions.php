@@ -99,7 +99,7 @@ function checkNew(PDO $database) {
     }
 }
 
-/** updates Pokemon database if values are the correct type
+/** updates Pokémon database if values are the correct type
  * @param PDO $database
  */
 function editPoke(PDO $database) {
@@ -131,7 +131,7 @@ function editPoke(PDO $database) {
  * @param PDO $database
  */
 function deletePoke(PDO $database) {
-    $deletePokemon = $database->prepare("UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id LIMIT 1;");
+    $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id LIMIT 1;');
     $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
     if ($ifExecute) {
         header('Location: collectionchallenge.php');
