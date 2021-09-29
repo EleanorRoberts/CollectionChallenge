@@ -1,7 +1,6 @@
 <?php
 require_once "collectionfunctions.php";
-require_once "collectiondb.php";
-$db = connectToDB("pokemon");
+$db = connectToDB('pokemon');
 $pokemon = collectData($db);
 ?>
 <!DOCTYPE html>
@@ -9,14 +8,21 @@ $pokemon = collectData($db);
 <head>
     <meta charset="UTF-8" />
     <title>Pokemon Collection</title>
-    <link rel="stylesheet" href="normalize.css" />
+    <?php echo addStyle(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 <h1>Pokemonz</h1>
-<?php
-echo displayPoke($pokemon);
-?>
-<a href="addpokemon.php">Add New Pokemon</a>
+<section class="pokeCards">
+    <?php
+    echo displayPoke($pokemon);
+    ?>
+</section>
+<section>
+    <a href="addpokemon.php" class="addPoke">Add New Pokemon</a>
+</section>
+<footer class="footer">
+    <p>Nova Inc. Ltd</p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    font-family: "Nunito", Papyrus;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 9vw;
+    margin: 0px;
+    padding: 20px 0px 10px 0px;
+}
+
+section, footer {
+    width: 80%;
+    margin: 0 auto;
+}
+
+footer {
+    color: white;
+    border-top: 1px solid darkgray;
+    text-align: end;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.pokeCard {
+    margin: 10px;
+    padding: 10px 30px;
+    width: 30%;
+    background-color: darkslateblue;
+    color: white;
+    border-radius: 10%;
+}
+
+.pokeCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.addPoke {
+    display: block;
+    width: 40%;
+    background-color: white;
+    padding: 30px;
+    margin: 20px auto;
+    color: darkslateblue;
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+}
