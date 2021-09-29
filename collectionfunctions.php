@@ -70,13 +70,12 @@ function addStyle(): String {
     $input .= "<link rel='stylesheet' href='collectionstyle.css' />";
     return $input;
 }
-$postIsSet = isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed']);
 
 /** Checks to see if a new Pokémon is being added
  * @param PDO $database
  */
 function checkNew(PDO $database) {
-    if ($postIsSet) {
+    if (isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed'])) {
         if (is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed'])) {
             $insertNewPokemon = $database->prepare('INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (:name, :type1, :type2, :hp, :attack, :defense, :spAttack, :spDefense, :speed);');
             $ifExecute = $insertNewPokemon->execute([
@@ -103,7 +102,7 @@ function checkNew(PDO $database) {
  * @param PDO $database
  */
 function editPoke(PDO $database) {
-    if ($postIsSet) {
+    if (isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed'])) {
         if (is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed'])) {
             $editPokemon = $database->prepare("UPDATE `stats` SET `name` = :name, `type1` = :type1, `type2` = :type2, `hp` = :hp, `attack` = :attack, `defense` = :defense, `spAttack` = :spAttack, `spDefense` = :spDefense, `speed` = :speed WHERE `id` = :id LIMIT 1;");
             $ifExecute = $editPokemon->execute([
