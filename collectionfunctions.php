@@ -75,8 +75,8 @@ function addStyle(): String {
  * @param PDO $database
  */
 function checkNew(PDO $database) {
-    if (isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed'])) {
-        if (is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed'])) {
+    if (checkPost()) {
+        if (checkNum()) {
             $insertNewPokemon = $database->prepare('INSERT INTO `stats` (`name`,`type1`,`type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed`) VALUES (:name, :type1, :type2, :hp, :attack, :defense, :spAttack, :spDefense, :speed);');
             $ifExecute = $insertNewPokemon->execute([
                 ':name' => $_POST['name'],
@@ -98,12 +98,28 @@ function checkNew(PDO $database) {
     }
 }
 
+/** Checks to see if $_POST values are numeric (where applicable)
+ * @return bool
+ */
+function checkNum(): Bool {
+//    if (checkPost()) {
+        return is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed']);
+//    } return false;
+}
+
+/** Checks to see if relevant fields in post are set
+ * @return bool
+ */
+function checkPost(): Bool {
+    return isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed']);
+}
+
 /** updates Pokémon database if values are the correct type
  * @param PDO $database
  */
 function editPoke(PDO $database) {
-    if (isset($_POST['name'], $_POST['type1'], $_POST['hp'], $_POST['attack'], $_POST['defense'], $_POST['spAttack'], $_POST['spDefense'], $_POST['speed'])) {
-        if (is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed'])) {
+    if (checkPost()) {
+        if (checkNum()) {
             $editPokemon = $database->prepare("UPDATE `stats` SET `name` = :name, `type1` = :type1, `type2` = :type2, `hp` = :hp, `attack` = :attack, `defense` = :defense, `spAttack` = :spAttack, `spDefense` = :spDefense, `speed` = :speed WHERE `id` = :id LIMIT 1;");
             $ifExecute = $editPokemon->execute([
                 ':id' => $_GET['id'],
@@ -119,10 +135,8 @@ function editPoke(PDO $database) {
             ]);
             if ($ifExecute) {
                 header('Location: index.php');
-            } else {
-                echo "<div class='error'>Unable to edit Pokémon in the collection</div>";
             }
-        }
+        } echo "<div class='error'>Unable to edit Pokémon in the collection</div>";
     }
 }
 
