@@ -2,6 +2,7 @@
 require_once 'collectionfunctions.php';
 $db = connectToDB('pokemon');
 $poke = getPoke($db);
+$types = getTypes($db);
 editPoke($db);
 ?>
     <!DOCTYPE html>
@@ -17,11 +18,22 @@ editPoke($db);
     <h1>Edit Your Pokemonz</h1>
     <form method="post">
         <label for="name">Name
-            <input type="text" name="name" value="<?php echo $poke['name'] ?>" required /></label>
+            <input type="text" name="name" value="<?php echo $poke['name'] ?>" required />
+        </label>
         <label for="type1">First Type
-            <input type="text" name="type1" value="<?php echo $poke['type1'] ?>" required/></label>
+            <select name="type1">
+                <?php
+                echo makeTypesList($types);
+                ?>
+            </select>
+        </label>
         <label for="type2">Second Type
-            <input type="text" name="type2" value="<?php echo $poke['type2'] ?>"/></label>
+            <select name="type2">
+                <?php
+                echo makeTypesList($types);
+                ?>
+            </select>
+        </label>
         <label for="hp">HP
             <input type="number" name="hp" value="<?php echo $poke['hp'] ?>" required/></label>
         <label for="attack">Attack

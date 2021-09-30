@@ -9,7 +9,7 @@ function displayPoke(Array $pokemon): String {
     foreach ($pokemon as $poke) {
         $output .= "<div class='pokeCard'>";
         $output .= "<h2>{$poke['name']}</h2>";
-        if ($poke["type2"] === "") {
+        if ($poke["type2"] == "") {
             $output .= "<p>{$poke['type1']}</p>";
         } else {
             $output .= "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
@@ -33,7 +33,7 @@ function displayPoke(Array $pokemon): String {
  * @return PDO
  */
 function connectToDB(String $database): PDO {
-    $dbConnection = new PDO("mysql:host=db; dbname={$database}", 'root', 'password' );
+    $dbConnection = new PDO("mysql:host=db; dbname=$database", 'root', 'password' );
     $dbConnection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     return $dbConnection;
 }
@@ -43,7 +43,7 @@ function connectToDB(String $database): PDO {
  * @return array
  */
 function getPokes(PDO $database): Array {
-    $getPokemon = $database->prepare("SELECT `id`, `name`, `type1`, `type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed` FROM `stats` WHERE `deleted` = 0;");
+    $getPokemon = $database->prepare("SELECT `stats`.`id`, `stats`.`name`, `ty`.`type` AS `type1`, `ty2`.`type` AS `type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` LEFT JOIN `types` `ty` ON `stats`.`type1` = `ty`.`id` LEFT JOIN `types` `ty2` ON `stats`.`type2` = `ty2`.`id` WHERE `stats`.`deleted` = 0;");
     $getPokemon->execute();
     return $getPokemon->fetchAll();
 }
@@ -53,17 +53,16 @@ function getPokes(PDO $database): Array {
  * @return array
  */
 function getPoke(PDO $database): Array {
-    $getPokemon = $database->prepare("SELECT `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` WHERE `id` = '{$_GET['id']}' AND `deleted` = 0;");
-    $getPokemon->execute();
-    return $getPokemon->fetch();
+    $getPoke = $database->prepare("SELECT `stats`.`name`, `ty`.`type` AS `type1`, `ty2`.`type` AS `type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` LEFT JOIN `types` `ty` ON `stats`.`type1` = `ty`.`id` LEFT JOIN `types` `ty2` ON `stats`.`type2` = `ty2`.`id` WHERE `stats`.`id` = :id AND `deleted` = 0;");
+    $getPoke->execute(['id' => $_GET['id']]);
+    return $getPoke->fetch();
 }
 
 /** Links page to style sheets
  * @return String
  */
 function addStyle(): String {
-    $input = '';
-    $input .= "<link rel='preconnect' href='https://fonts.googleapis.com' />";
+    $input = "<link rel='preconnect' href='https://fonts.googleapis.com' />";
     $input .= "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />";
     $input .= "<link href='https://fonts.googleapis.com/css2?family=Nunito&display=swap' rel='stylesheet' />";
     $input .= "<link rel='stylesheet' href='normalize.css' />";
@@ -124,7 +123,9 @@ function editPoke(PDO $database) {
                 ':id' => $_GET['id'],
                 ':name' => $_POST['name'],
                 ':type1' => $_POST['type1'],
+//                ':type1' => $_POST['type1'],
                 ':type2' => $_POST['type2'],
+//                ':type2' => $_POST['type2'],
                 ':hp' => $_POST['hp'],
                 ':attack' => $_POST['attack'],
                 ':defense' => $_POST['defense'],
@@ -144,7 +145,7 @@ function editPoke(PDO $database) {
  */
 function deletePoke(PDO $database) {
     if (isset($_GET['id'])) {
-        $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id;');
+        $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id LIMIT 1;');
         $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
         if ($ifExecute) {
             header('Location: index.php');
@@ -155,4 +156,26 @@ function deletePoke(PDO $database) {
     } else {
         header('Location: index.php');
     }
+}
+
+/** Fetches the list of Pokémon types from types array
+ * @param PDO $database
+ * @return array
+ */
+function getTypes(PDO $database): Array {
+    $getType = $database->prepare('SELECT `id`, `type` FROM `types`');
+    $getType->execute();
+    return $getType->fetchAll();
+}
+
+/** Creates a list from an array of types
+ * @param array $typesArray
+ * @return String
+ */
+function makeTypesList(Array $typesArray): String {
+    $output = '';
+    foreach ($typesArray as $type) {
+        $output .= "<option value='{$type['id']}'>{$type['type']}</option>";
+    }
+    return $output;
 }
