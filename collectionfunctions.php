@@ -10,17 +10,18 @@ function displayPoke(Array $pokemon): String {
         $output .= "<div class='pokeCard'>";
         $output .= "<h2>{$poke['name']}</h2>";
         if ($poke["type2"] == "") {
-            $output .= "<p>{$poke['type1']}</p>";
+            $output .= "<p class='type'>{$poke['type1']}</p>";
         } else {
-            $output .= "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+            $output .= "<p class='type'>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
         }
-        $output .= '<ul>';
-        $output .= "<li>HP: {$poke['hp']}</li>";
-        $output .= "<li>Attack: {$poke['attack']}</li>";
-        $output .= "<li>Defense: {$poke['defense']}</li>";
-        $output .= "<li>Sp. Attack: {$poke['spAttack']}</li>";
-        $output .= "<li>Sp. Defense: {$poke['spDefense']}</li>";
-        $output .= "<li class='speed'>Speed: {$poke['speed']}</li>";
+        $output .= '<table>';
+        $output .= '<tr><th>Stat</th><th>Value</th></tr>';
+        $output .= "<tr><td>HP: </td><td>{$poke['hp']}</td></tr>";
+        $output .= "<tr><td>Attack: </td><td>{$poke['attack']}</td></tr>";
+        $output .= "<tr><td>Defense: </td><td>{$poke['defense']}</td></tr>";
+        $output .= "<tr><td>Sp. Attack: </td><td>{$poke['spAttack']}</td></tr>";
+        $output .= "<tr><td>Sp. Defense: </td><td>{$poke['spDefense']}</td></tr>";
+        $output .= "<tr><td>Speed: </td><td>{$poke['speed']}</td></tr></table>";
         $output .= "<a href='editpokemon.php?id={$poke['id']}' class='edit'>Edit</a>";
         $output .= "<a href='deletePokemon.php?id={$poke['id']}' class='delete'>Delete</a>";
         $output .= '</div>';
