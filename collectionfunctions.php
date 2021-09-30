@@ -102,9 +102,8 @@ function checkNew(PDO $database) {
  * @return bool
  */
 function checkNum(): Bool {
-//    if (checkPost()) {
-        return is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed']);
-//    } return false;
+    return is_numeric($_POST['hp'] . $_POST['attack'] . $_POST['defense'] . $_POST['spAttack'] . $_POST['spDefense'] . $_POST['speed']);
+
 }
 
 /** Checks to see if relevant fields in post are set
