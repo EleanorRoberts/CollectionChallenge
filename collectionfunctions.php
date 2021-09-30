@@ -42,7 +42,7 @@ function connectToDB(String $database): PDO {
  * @param PDO $database
  * @return array
  */
-function collectData(PDO $database): Array {
+function getPokes(PDO $database): Array {
     $getPokemon = $database->prepare("SELECT `id`, `name`, `type1`, `type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed` FROM `stats` WHERE `deleted` = 0;");
     $getPokemon->execute();
     return $getPokemon->fetchAll();
@@ -90,7 +90,7 @@ function checkNew(PDO $database) {
                 ':speed' => $_POST['speed']
             ]);
             if ($ifExecute) {
-                header('Location: collectionchallenge.php');
+                header('Location: index.php');
             }
         } else {
             echo "<div class='error'>Unable to add Pokémon to the collection</div>";
@@ -118,7 +118,7 @@ function editPoke(PDO $database) {
                 ':speed' => $_POST['speed']
             ]);
             if ($ifExecute) {
-                header('Location: collectionchallenge.php');
+                header('Location: index.php');
             } else {
                 echo "<div class='error'>Unable to edit Pokémon in the collection</div>";
             }
@@ -130,12 +130,16 @@ function editPoke(PDO $database) {
  * @param PDO $database
  */
 function deletePoke(PDO $database) {
-    $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id;');
-    $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
-    if ($ifExecute) {
-        header('Location: collectionchallenge.php');
+    if (isset($_GET['id'])) {
+        $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id;');
+        $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
+        if ($ifExecute) {
+            header('Location: index.php');
+        } else {
+            echo "<div class='error'>Unable to delete Pokémon from the collection</div>";
+            echo "<a href='index.php'>Go Back</a>";
+        }
     } else {
-        echo "<div class='error'>Unable to delete Pokémon from the collection</div>";
-        echo "<a href='collectionchallenge.php'>Go Back</a>";
+        header('Location: index.php');
     }
 }
