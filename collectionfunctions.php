@@ -43,7 +43,7 @@ function connectToDB(String $database): PDO {
  * @return array
  */
 function collectData(PDO $database): Array {
-    $getPokemon = $database->prepare("SELECT `stats`.`id`, `stats`.`name`, `stats`.`type1`, `stats`.`type2`, `stats`.`hp`, `stats`.`attack`, `stats`.`defense`, `stats`.`spAttack`, `stats`.`spDefense`, `stats`.`speed` FROM `stats` WHERE `deleted` = 0;");
+    $getPokemon = $database->prepare("SELECT `id`, `name`, `type1`, `type2`, hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed` FROM `stats` WHERE `deleted` = 0;");
     $getPokemon->execute();
     return $getPokemon->fetchAll();
 }
@@ -126,11 +126,11 @@ function editPoke(PDO $database) {
     }
 }
 
-/** Soft delete Pokémon record and refresh page to show undeleted pokemon
+/** Soft delete Pokémon record and refresh page to show undeleted Pokémon
  * @param PDO $database
  */
 function deletePoke(PDO $database) {
-    $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id LIMIT 1;');
+    $deletePokemon = $database->prepare('UPDATE `stats` SET `deleted` = 1 WHERE `id` = :id;');
     $ifExecute = $deletePokemon->execute([':id' => $_GET['id']]);
     if ($ifExecute) {
         header('Location: collectionchallenge.php');
