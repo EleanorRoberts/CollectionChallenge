@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
-    font-family: "Nunito", Papyrus;
+    font-family: "Nunito", sans-serif;
 }
 
 h1 {
     text-align: center;
-    color: white;
+    color: #FFFFFF;
     font-size: 9vw;
     margin: 0px;
     padding: 20px 0px 10px 0px;
@@ -17,9 +17,14 @@ section, footer {
 }
 
 footer {
-    color: white;
-    border-top: 1px solid darkgray;
+    color: #FFFFFF;
+    margin-top: 10px;
+    border-top: 1px solid #A9A9A9FF;
     text-align: end;
+}
+
+body {
+    background-color: #D3D3D3;
 }
 
 ul {
@@ -27,16 +32,26 @@ ul {
     padding: 0px;
 }
 
-body {
-    background-color: lightgrey;
+.edit, .delete {
+     background-color: #FFFFFF;
+     padding: 5px;
+     margin: 10px 10px;
+     color: #483D8B;
+     text-decoration: none;
+     border-radius: 5px;
+     text-align: center;
+}
+
+.speed {
+    margin-bottom: 10px;
 }
 
 .pokeCard {
     margin: 10px;
     padding: 10px 30px;
     width: 30%;
-    background-color: darkslateblue;
-    color: white;
+    background-color: #483D8B;
+    color: #FFFFFF;
     border-radius: 10%;
 }
 
@@ -49,12 +64,23 @@ body {
 .addPoke {
     display: block;
     width: 40%;
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 30px;
     margin: 20px auto;
-    color: darkslateblue;
+    color: #483D8B;
     text-decoration: none;
     border-radius: 20px;
     text-align: center;
     font-size: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    .pokeCard {
+        width: 80%;
+    }
 }
