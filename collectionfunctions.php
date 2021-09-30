@@ -43,7 +43,7 @@ function connectToDB(String $database): PDO {
  * @return array
  */
 function collectData(PDO $database): Array {
-    $getPokemon = $database->prepare("SELECT `id`, `name`, `type1`, `type2`, hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed` FROM `stats` WHERE `deleted` = 0;");
+    $getPokemon = $database->prepare("SELECT `id`, `name`, `type1`, `type2`, `hp`, `attack`, `defense`, `spAttack`, `spDefense`, `speed` FROM `stats` WHERE `deleted` = 0;");
     $getPokemon->execute();
     return $getPokemon->fetchAll();
 }
