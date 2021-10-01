@@ -84,3 +84,976 @@ form label {
         width: 80%;
     }
 }
+
+.Fire {
+    background-color: #F08030;
+}
+.Water {
+    background-color: #6890EF;
+}
+.Grass {
+    background-color: #78C850;
+}
+.Electric {
+    background-color: #F8D030;
+}
+.Normal {
+    background-color: #A8A878;
+}
+.Ice {
+    background-color: #97D8D8;
+}
+.Rock {
+    background-color: #B7A038;
+}
+.Fighting {
+    background-color: #C03028;
+}
+.Poison {
+    background-color: #A040A0;
+}
+.Ground {
+    background-color: #E0C068;
+}
+.Flying {
+    background-color: #A890F0;
+}
+.Psychic {
+    background-color: #F85888;
+}
+.Bug {
+    background-color: #A8B81F;
+}
+.Ghost {
+    background-color: #705898;
+}
+.Dark {
+    background-color: #705848;
+}
+.Dragon {
+    background-color: #7038F8;
+}
+.Steel {
+    background-color: #B8B8D0;
+}
+.Fairy {
+    background-color: #F0B6BC;
+}
+.FireWater {
+    background-image: linear-gradient(to left, #F08030, #6890EF);
+}
+.FireGrass {
+    background-image: linear-gradient(to left, #F08030, #78C850);
+}
+.FireElectric {
+    background-image: linear-gradient(to left, #F08030, #F8D030);
+}
+.FireNormal {
+    background-image: linear-gradient(to left, #F08030, #A8A878);
+}
+.FireIce {
+    background-image: linear-gradient(to left, #F08030, #97D8D8);
+}
+.FireRock {
+    background-image: linear-gradient(to left, #F08030, #B7A038);
+}
+.FireFighting {
+    background-image: linear-gradient(to left, #F08030, #C03028);
+}
+.FirePoison {
+    background-image: linear-gradient(to left, #F08030, #A040A0);
+}
+.FireGround {
+    background-image: linear-gradient(to left, #F08030, #E0C068);
+}
+.FireFlying {
+    background-image: linear-gradient(to left, #F08030, #A890F0);
+}
+.FirePsychic {
+    background-image: linear-gradient(to left, #F08030, #F85888);
+}
+.FireBug {
+    background-image: linear-gradient(to left, #F08030, #A8B81F);
+}
+.FireGhost {
+    background-image: linear-gradient(to left, #F08030, #705898);
+}
+.FireDark {
+    background-image: linear-gradient(to left, #F08030, #705848);
+}
+.FireDragon {
+    background-image: linear-gradient(to left, #F08030, #7038F8);
+}
+.FireSteel {
+    background-image: linear-gradient(to left, #F08030, #B8B8D0);
+}
+.FireFairy {
+    background-image: linear-gradient(to left, #F08030, #F0B6BC);
+}
+.WaterFire {
+    background-image: linear-gradient(to left, #6890EF, #F08030);
+}
+.WaterGrass {
+    background-image: linear-gradient(to left, #6890EF, #78C850);
+}
+.WaterElectric {
+    background-image: linear-gradient(to left, #6890EF, #F8D030);
+}
+.WaterNormal {
+    background-image: linear-gradient(to left, #6890EF, #A8A878);
+}
+.WaterIce {
+    background-image: linear-gradient(to left, #6890EF, #97D8D8);
+}
+.WaterRock {
+    background-image: linear-gradient(to left, #6890EF, #B7A038);
+}
+.WaterFighting {
+    background-image: linear-gradient(to left, #6890EF, #C03028);
+}
+.WaterPoison {
+    background-image: linear-gradient(to left, #6890EF, #A040A0);
+}
+.WaterGround {
+    background-image: linear-gradient(to left, #6890EF, #E0C068);
+}
+.WaterFlying {
+    background-image: linear-gradient(to left, #6890EF, #A890F0);
+}
+.WaterPsychic {
+    background-image: linear-gradient(to left, #6890EF, #F85888);
+}
+.WaterBug {
+    background-image: linear-gradient(to left, #6890EF, #A8B81F);
+}
+.WaterGhost {
+    background-image: linear-gradient(to left, #6890EF, #705898);
+}
+.WaterDark {
+    background-image: linear-gradient(to left, #6890EF, #705848);
+}
+.WaterDragon {
+    background-image: linear-gradient(to left, #6890EF, #7038F8);
+}
+.WaterSteel {
+    background-image: linear-gradient(to left, #6890EF, #B8B8D0);
+}
+.WaterFairy {
+    background-image: linear-gradient(to left, #6890EF, #F0B6BC);
+}
+.GrassFire {
+    background-image: linear-gradient(to left, #78C850, #F08030);
+}
+.GrassWater {
+    background-image: linear-gradient(to left, #78C850, #6890EF);
+}
+.GrassElectric {
+    background-image: linear-gradient(to left, #78C850, #F8D030);
+}
+.GrassNormal {
+    background-image: linear-gradient(to left, #78C850, #A8A878);
+}
+.GrassIce {
+    background-image: linear-gradient(to left, #78C850, #97D8D8);
+}
+.GrassRock {
+    background-image: linear-gradient(to left, #78C850, #B7A038);
+}
+.GrassFighting {
+    background-image: linear-gradient(to left, #78C850, #C03028);
+}
+.GrassPoison {
+    background-image: linear-gradient(to left, #78C850, #A040A0);
+}
+.GrassGround {
+    background-image: linear-gradient(to left, #78C850, #E0C068);
+}
+.GrassFlying {
+    background-image: linear-gradient(to left, #78C850, #A890F0);
+}
+.GrassPsychic {
+    background-image: linear-gradient(to left, #78C850, #F85888);
+}
+.GrassBug {
+    background-image: linear-gradient(to left, #78C850, #A8B81F);
+}
+.GrassGhost {
+    background-image: linear-gradient(to left, #78C850, #705898);
+}
+.GrassDark {
+    background-image: linear-gradient(to left, #78C850, #705848);
+}
+.GrassDragon {
+    background-image: linear-gradient(to left, #78C850, #7038F8);
+}
+.GrassSteel {
+    background-image: linear-gradient(to left, #78C850, #B8B8D0);
+}
+.GrassFairy {
+    background-image: linear-gradient(to left, #78C850, #F0B6BC);
+}
+.ElectricFire {
+    background-image: linear-gradient(to left, #F8D030, #F08030);
+}
+.ElectricWater {
+    background-image: linear-gradient(to left, #F8D030, #6890EF);
+}
+.ElectricGrass {
+    background-image: linear-gradient(to left, #F8D030, #78C850);
+}
+.ElectricNormal {
+    background-image: linear-gradient(to left, #F8D030, #A8A878);
+}
+.ElectricIce {
+    background-image: linear-gradient(to left, #F8D030, #97D8D8);
+}
+.ElectricRock {
+    background-image: linear-gradient(to left, #F8D030, #B7A038);
+}
+.ElectricFighting {
+    background-image: linear-gradient(to left, #F8D030, #C03028);
+}
+.ElectricPoison {
+    background-image: linear-gradient(to left, #F8D030, #A040A0);
+}
+.ElectricGround {
+    background-image: linear-gradient(to left, #F8D030, #E0C068);
+}
+.ElectricFlying {
+    background-image: linear-gradient(to left, #F8D030, #A890F0);
+}
+.ElectricPsychic {
+    background-image: linear-gradient(to left, #F8D030, #F85888);
+}
+.ElectricBug {
+    background-image: linear-gradient(to left, #F8D030, #A8B81F);
+}
+.ElectricGhost {
+    background-image: linear-gradient(to left, #F8D030, #705898);
+}
+.ElectricDark {
+    background-image: linear-gradient(to left, #F8D030, #705848);
+}
+.ElectricDragon {
+    background-image: linear-gradient(to left, #F8D030, #7038F8);
+}
+.ElectricSteel {
+    background-image: linear-gradient(to left, #F8D030, #B8B8D0);
+}
+.ElectricFairy {
+    background-image: linear-gradient(to left, #F8D030, #F0B6BC);
+}
+.NormalFire {
+    background-image: linear-gradient(to left, #A8A878, #F08030);
+}
+.NormalWater {
+    background-image: linear-gradient(to left, #A8A878, #6890EF);
+}
+.NormalGrass {
+    background-image: linear-gradient(to left, #A8A878, #78C850);
+}
+.NormalElectric {
+    background-image: linear-gradient(to left, #A8A878, #F8D030);
+}
+.NormalIce {
+    background-image: linear-gradient(to left, #A8A878, #97D8D8);
+}
+.NormalRock {
+    background-image: linear-gradient(to left, #A8A878, #B7A038);
+}
+.NormalFighting {
+    background-image: linear-gradient(to left, #A8A878, #C03028);
+}
+.NormalPoison {
+    background-image: linear-gradient(to left, #A8A878, #A040A0);
+}
+.NormalGround {
+    background-image: linear-gradient(to left, #A8A878, #E0C068);
+}
+.NormalFlying {
+    background-image: linear-gradient(to left, #A8A878, #A890F0);
+}
+.NormalPsychic {
+    background-image: linear-gradient(to left, #A8A878, #F85888);
+}
+.NormalBug {
+    background-image: linear-gradient(to left, #A8A878, #A8B81F);
+}
+.NormalGhost {
+    background-image: linear-gradient(to left, #A8A878, #705898);
+}
+.NormalDark {
+    background-image: linear-gradient(to left, #A8A878, #705848);
+}
+.NormalDragon {
+    background-image: linear-gradient(to left, #A8A878, #7038F8);
+}
+.NormalSteel {
+    background-image: linear-gradient(to left, #A8A878, #B8B8D0);
+}
+.NormalFairy {
+    background-image: linear-gradient(to left, #A8A878, #F0B6BC);
+}
+.IceFire {
+    background-image: linear-gradient(to left, #97D8D8, #F08030);
+}
+.IceWater {
+    background-image: linear-gradient(to left, #97D8D8, #6890EF);
+}
+.IceGrass {
+    background-image: linear-gradient(to left, #97D8D8, #78C850);
+}
+.IceElectric {
+    background-image: linear-gradient(to left, #97D8D8, #F8D030);
+}
+.IceNormal {
+    background-image: linear-gradient(to left, #97D8D8, #A8A878);
+}
+.IceRock {
+    background-image: linear-gradient(to left, #97D8D8, #B7A038);
+}
+.IceFighting {
+    background-image: linear-gradient(to left, #97D8D8, #C03028);
+}
+.IcePoison {
+    background-image: linear-gradient(to left, #97D8D8, #A040A0);
+}
+.IceGround {
+    background-image: linear-gradient(to left, #97D8D8, #E0C068);
+}
+.IceFlying {
+    background-image: linear-gradient(to left, #97D8D8, #A890F0);
+}
+.IcePsychic {
+    background-image: linear-gradient(to left, #97D8D8, #F85888);
+}
+.IceBug {
+    background-image: linear-gradient(to left, #97D8D8, #A8B81F);
+}
+.IceGhost {
+    background-image: linear-gradient(to left, #97D8D8, #705898);
+}
+.IceDark {
+    background-image: linear-gradient(to left, #97D8D8, #705848);
+}
+.IceDragon {
+    background-image: linear-gradient(to left, #97D8D8, #7038F8);
+}
+.IceSteel {
+    background-image: linear-gradient(to left, #97D8D8, #B8B8D0);
+}
+.IceFairy {
+    background-image: linear-gradient(to left, #97D8D8, #F0B6BC);
+}
+.RockFire {
+    background-image: linear-gradient(to left, #B7A038, #F08030);
+}
+.RockWater {
+    background-image: linear-gradient(to left, #B7A038, #6890EF);
+}
+.RockGrass {
+    background-image: linear-gradient(to left, #B7A038, #78C850);
+}
+.RockElectric {
+    background-image: linear-gradient(to left, #B7A038, #F8D030);
+}
+.RockNormal {
+    background-image: linear-gradient(to left, #B7A038, #A8A878);
+}
+.RockIce {
+    background-image: linear-gradient(to left, #B7A038, #97D8D8);
+}
+.RockFighting {
+    background-image: linear-gradient(to left, #B7A038, #C03028);
+}
+.RockPoison {
+    background-image: linear-gradient(to left, #B7A038, #A040A0);
+}
+.RockGround {
+    background-image: linear-gradient(to left, #B7A038, #E0C068);
+}
+.RockFlying {
+    background-image: linear-gradient(to left, #B7A038, #A890F0);
+}
+.RockPsychic {
+    background-image: linear-gradient(to left, #B7A038, #F85888);
+}
+.RockBug {
+    background-image: linear-gradient(to left, #B7A038, #A8B81F);
+}
+.RockGhost {
+    background-image: linear-gradient(to left, #B7A038, #705898);
+}
+.RockDark {
+    background-image: linear-gradient(to left, #B7A038, #705848);
+}
+.RockDragon {
+    background-image: linear-gradient(to left, #B7A038, #7038F8);
+}
+.RockSteel {
+    background-image: linear-gradient(to left, #B7A038, #B8B8D0);
+}
+.RockFairy {
+    background-image: linear-gradient(to left, #B7A038, #F0B6BC);
+}
+.FightingFire {
+    background-image: linear-gradient(to left, #C03028, #F08030);
+}
+.FightingWater {
+    background-image: linear-gradient(to left, #C03028, #6890EF);
+}
+.FightingGrass {
+    background-image: linear-gradient(to left, #C03028, #78C850);
+}
+.FightingElectric {
+    background-image: linear-gradient(to left, #C03028, #F8D030);
+}
+.FightingNormal {
+    background-image: linear-gradient(to left, #C03028, #A8A878);
+}
+.FightingIce {
+    background-image: linear-gradient(to left, #C03028, #97D8D8);
+}
+.FightingRock {
+    background-image: linear-gradient(to left, #C03028, #B7A038);
+}
+.FightingPoison {
+    background-image: linear-gradient(to left, #C03028, #A040A0);
+}
+.FightingGround {
+    background-image: linear-gradient(to left, #C03028, #E0C068);
+}
+.FightingFlying {
+    background-image: linear-gradient(to left, #C03028, #A890F0);
+}
+.FightingPsychic {
+    background-image: linear-gradient(to left, #C03028, #F85888);
+}
+.FightingBug {
+    background-image: linear-gradient(to left, #C03028, #A8B81F);
+}
+.FightingGhost {
+    background-image: linear-gradient(to left, #C03028, #705898);
+}
+.FightingDark {
+    background-image: linear-gradient(to left, #C03028, #705848);
+}
+.FightingDragon {
+    background-image: linear-gradient(to left, #C03028, #7038F8);
+}
+.FightingSteel {
+    background-image: linear-gradient(to left, #C03028, #B8B8D0);
+}
+.FightingFairy {
+    background-image: linear-gradient(to left, #C03028, #F0B6BC);
+}
+.PoisonFire {
+    background-image: linear-gradient(to left, #A040A0, #F08030);
+}
+.PoisonWater {
+    background-image: linear-gradient(to left, #A040A0, #6890EF);
+}
+.PoisonGrass {
+    background-image: linear-gradient(to left, #A040A0, #78C850);
+}
+.PoisonElectric {
+    background-image: linear-gradient(to left, #A040A0, #F8D030);
+}
+.PoisonNormal {
+    background-image: linear-gradient(to left, #A040A0, #A8A878);
+}
+.PoisonIce {
+    background-image: linear-gradient(to left, #A040A0, #97D8D8);
+}
+.PoisonRock {
+    background-image: linear-gradient(to left, #A040A0, #B7A038);
+}
+.PoisonFighting {
+    background-image: linear-gradient(to left, #A040A0, #C03028);
+}
+.PoisonGround {
+    background-image: linear-gradient(to left, #A040A0, #E0C068);
+}
+.PoisonFlying {
+    background-image: linear-gradient(to left, #A040A0, #A890F0);
+}
+.PoisonPsychic {
+    background-image: linear-gradient(to left, #A040A0, #F85888);
+}
+.PoisonBug {
+    background-image: linear-gradient(to left, #A040A0, #A8B81F);
+}
+.PoisonGhost {
+    background-image: linear-gradient(to left, #A040A0, #705898);
+}
+.PoisonDark {
+    background-image: linear-gradient(to left, #A040A0, #705848);
+}
+.PoisonDragon {
+    background-image: linear-gradient(to left, #A040A0, #7038F8);
+}
+.PoisonSteel {
+    background-image: linear-gradient(to left, #A040A0, #B8B8D0);
+}
+.PoisonFairy {
+    background-image: linear-gradient(to left, #A040A0, #F0B6BC);
+}
+.GroundFire {
+    background-image: linear-gradient(to left, #E0C068, #F08030);
+}
+.GroundWater {
+    background-image: linear-gradient(to left, #E0C068, #6890EF);
+}
+.GroundGrass {
+    background-image: linear-gradient(to left, #E0C068, #78C850);
+}
+.GroundElectric {
+    background-image: linear-gradient(to left, #E0C068, #F8D030);
+}
+.GroundNormal {
+    background-image: linear-gradient(to left, #E0C068, #A8A878);
+}
+.GroundIce {
+    background-image: linear-gradient(to left, #E0C068, #97D8D8);
+}
+.GroundRock {
+    background-image: linear-gradient(to left, #E0C068, #B7A038);
+}
+.GroundFighting {
+    background-image: linear-gradient(to left, #E0C068, #C03028);
+}
+.GroundPoison {
+    background-image: linear-gradient(to left, #E0C068, #A040A0);
+}
+.GroundFlying {
+    background-image: linear-gradient(to left, #E0C068, #A890F0);
+}
+.GroundPsychic {
+    background-image: linear-gradient(to left, #E0C068, #F85888);
+}
+.GroundBug {
+    background-image: linear-gradient(to left, #E0C068, #A8B81F);
+}
+.GroundGhost {
+    background-image: linear-gradient(to left, #E0C068, #705898);
+}
+.GroundDark {
+    background-image: linear-gradient(to left, #E0C068, #705848);
+}
+.GroundDragon {
+    background-image: linear-gradient(to left, #E0C068, #7038F8);
+}
+.GroundSteel {
+    background-image: linear-gradient(to left, #E0C068, #B8B8D0);
+}
+.GroundFairy {
+    background-image: linear-gradient(to left, #E0C068, #F0B6BC);
+}
+.FlyingFire {
+    background-image: linear-gradient(to left, #A890F0, #F08030);
+}
+.FlyingWater {
+    background-image: linear-gradient(to left, #A890F0, #6890EF);
+}
+.FlyingGrass {
+    background-image: linear-gradient(to left, #A890F0, #78C850);
+}
+.FlyingElectric {
+    background-image: linear-gradient(to left, #A890F0, #F8D030);
+}
+.FlyingNormal {
+    background-image: linear-gradient(to left, #A890F0, #A8A878);
+}
+.FlyingIce {
+    background-image: linear-gradient(to left, #A890F0, #97D8D8);
+}
+.FlyingRock {
+    background-image: linear-gradient(to left, #A890F0, #B7A038);
+}
+.FlyingFighting {
+    background-image: linear-gradient(to left, #A890F0, #C03028);
+}
+.FlyingPoison {
+    background-image: linear-gradient(to left, #A890F0, #A040A0);
+}
+.FlyingGround {
+    background-image: linear-gradient(to left, #A890F0, #E0C068);
+}
+.FlyingPsychic {
+    background-image: linear-gradient(to left, #A890F0, #F85888);
+}
+.FlyingBug {
+    background-image: linear-gradient(to left, #A890F0, #A8B81F);
+}
+.FlyingGhost {
+    background-image: linear-gradient(to left, #A890F0, #705898);
+}
+.FlyingDark {
+    background-image: linear-gradient(to left, #A890F0, #705848);
+}
+.FlyingDragon {
+    background-image: linear-gradient(to left, #A890F0, #7038F8);
+}
+.FlyingSteel {
+    background-image: linear-gradient(to left, #A890F0, #B8B8D0);
+}
+.FlyingFairy {
+    background-image: linear-gradient(to left, #A890F0, #F0B6BC);
+}
+.PsychicFire {
+    background-image: linear-gradient(to left, #F85888, #F08030);
+}
+.PsychicWater {
+    background-image: linear-gradient(to left, #F85888, #6890EF);
+}
+.PsychicGrass {
+    background-image: linear-gradient(to left, #F85888, #78C850);
+}
+.PsychicElectric {
+    background-image: linear-gradient(to left, #F85888, #F8D030);
+}
+.PsychicNormal {
+    background-image: linear-gradient(to left, #F85888, #A8A878);
+}
+.PsychicIce {
+    background-image: linear-gradient(to left, #F85888, #97D8D8);
+}
+.PsychicRock {
+    background-image: linear-gradient(to left, #F85888, #B7A038);
+}
+.PsychicFighting {
+    background-image: linear-gradient(to left, #F85888, #C03028);
+}
+.PsychicPoison {
+    background-image: linear-gradient(to left, #F85888, #A040A0);
+}
+.PsychicGround {
+    background-image: linear-gradient(to left, #F85888, #E0C068);
+}
+.PsychicFlying {
+    background-image: linear-gradient(to left, #F85888, #A890F0);
+}
+.PsychicBug {
+    background-image: linear-gradient(to left, #F85888, #A8B81F);
+}
+.PsychicGhost {
+    background-image: linear-gradient(to left, #F85888, #705898);
+}
+.PsychicDark {
+    background-image: linear-gradient(to left, #F85888, #705848);
+}
+.PsychicDragon {
+    background-image: linear-gradient(to left, #F85888, #7038F8);
+}
+.PsychicSteel {
+    background-image: linear-gradient(to left, #F85888, #B8B8D0);
+}
+.PsychicFairy {
+    background-image: linear-gradient(to left, #F85888, #F0B6BC);
+}
+.BugFire {
+    background-image: linear-gradient(to left, #A8B81F, #F08030);
+}
+.BugWater {
+    background-image: linear-gradient(to left, #A8B81F, #6890EF);
+}
+.BugGrass {
+    background-image: linear-gradient(to left, #A8B81F, #78C850);
+}
+.BugElectric {
+    background-image: linear-gradient(to left, #A8B81F, #F8D030);
+}
+.BugNormal {
+    background-image: linear-gradient(to left, #A8B81F, #A8A878);
+}
+.BugIce {
+    background-image: linear-gradient(to left, #A8B81F, #97D8D8);
+}
+.BugRock {
+    background-image: linear-gradient(to left, #A8B81F, #B7A038);
+}
+.BugFighting {
+    background-image: linear-gradient(to left, #A8B81F, #C03028);
+}
+.BugPoison {
+    background-image: linear-gradient(to left, #A8B81F, #A040A0);
+}
+.BugGround {
+    background-image: linear-gradient(to left, #A8B81F, #E0C068);
+}
+.BugFlying {
+    background-image: linear-gradient(to left, #A8B81F, #A890F0);
+}
+.BugPsychic {
+    background-image: linear-gradient(to left, #A8B81F, #F85888);
+}
+.BugGhost {
+    background-image: linear-gradient(to left, #A8B81F, #705898);
+}
+.BugDark {
+    background-image: linear-gradient(to left, #A8B81F, #705848);
+}
+.BugDragon {
+    background-image: linear-gradient(to left, #A8B81F, #7038F8);
+}
+.BugSteel {
+    background-image: linear-gradient(to left, #A8B81F, #B8B8D0);
+}
+.BugFairy {
+    background-image: linear-gradient(to left, #A8B81F, #F0B6BC);
+}
+.GhostFire {
+    background-image: linear-gradient(to left, #705898, #F08030);
+}
+.GhostWater {
+    background-image: linear-gradient(to left, #705898, #6890EF);
+}
+.GhostGrass {
+    background-image: linear-gradient(to left, #705898, #78C850);
+}
+.GhostElectric {
+    background-image: linear-gradient(to left, #705898, #F8D030);
+}
+.GhostNormal {
+    background-image: linear-gradient(to left, #705898, #A8A878);
+}
+.GhostIce {
+    background-image: linear-gradient(to left, #705898, #97D8D8);
+}
+.GhostRock {
+    background-image: linear-gradient(to left, #705898, #B7A038);
+}
+.GhostFighting {
+    background-image: linear-gradient(to left, #705898, #C03028);
+}
+.GhostPoison {
+    background-image: linear-gradient(to left, #705898, #A040A0);
+}
+.GhostGround {
+    background-image: linear-gradient(to left, #705898, #E0C068);
+}
+.GhostFlying {
+    background-image: linear-gradient(to left, #705898, #A890F0);
+}
+.GhostPsychic {
+    background-image: linear-gradient(to left, #705898, #F85888);
+}
+.GhostBug {
+    background-image: linear-gradient(to left, #705898, #A8B81F);
+}
+.GhostDark {
+    background-image: linear-gradient(to left, #705898, #705848);
+}
+.GhostDragon {
+    background-image: linear-gradient(to left, #705898, #7038F8);
+}
+.GhostSteel {
+    background-image: linear-gradient(to left, #705898, #B8B8D0);
+}
+.GhostFairy {
+    background-image: linear-gradient(to left, #705898, #F0B6BC);
+}
+.DarkFire {
+    background-image: linear-gradient(to left, #705848, #F08030);
+}
+.DarkWater {
+    background-image: linear-gradient(to left, #705848, #6890EF);
+}
+.DarkGrass {
+    background-image: linear-gradient(to left, #705848, #78C850);
+}
+.DarkElectric {
+    background-image: linear-gradient(to left, #705848, #F8D030);
+}
+.DarkNormal {
+    background-image: linear-gradient(to left, #705848, #A8A878);
+}
+.DarkIce {
+    background-image: linear-gradient(to left, #705848, #97D8D8);
+}
+.DarkRock {
+    background-image: linear-gradient(to left, #705848, #B7A038);
+}
+.DarkFighting {
+    background-image: linear-gradient(to left, #705848, #C03028);
+}
+.DarkPoison {
+    background-image: linear-gradient(to left, #705848, #A040A0);
+}
+.DarkGround {
+    background-image: linear-gradient(to left, #705848, #E0C068);
+}
+.DarkFlying {
+    background-image: linear-gradient(to left, #705848, #A890F0);
+}
+.DarkPsychic {
+    background-image: linear-gradient(to left, #705848, #F85888);
+}
+.DarkBug {
+    background-image: linear-gradient(to left, #705848, #A8B81F);
+}
+.DarkGhost {
+    background-image: linear-gradient(to left, #705848, #705898);
+}
+.DarkDragon {
+    background-image: linear-gradient(to left, #705848, #7038F8);
+}
+.DarkSteel {
+    background-image: linear-gradient(to left, #705848, #B8B8D0);
+}
+.DarkFairy {
+    background-image: linear-gradient(to left, #705848, #F0B6BC);
+}
+.DragonFire {
+    background-image: linear-gradient(to left, #7038F8, #F08030);
+}
+.DragonWater {
+    background-image: linear-gradient(to left, #7038F8, #6890EF);
+}
+.DragonGrass {
+    background-image: linear-gradient(to left, #7038F8, #78C850);
+}
+.DragonElectric {
+    background-image: linear-gradient(to left, #7038F8, #F8D030);
+}
+.DragonNormal {
+    background-image: linear-gradient(to left, #7038F8, #A8A878);
+}
+.DragonIce {
+    background-image: linear-gradient(to left, #7038F8, #97D8D8);
+}
+.DragonRock {
+    background-image: linear-gradient(to left, #7038F8, #B7A038);
+}
+.DragonFighting {
+    background-image: linear-gradient(to left, #7038F8, #C03028);
+}
+.DragonPoison {
+    background-image: linear-gradient(to left, #7038F8, #A040A0);
+}
+.DragonGround {
+    background-image: linear-gradient(to left, #7038F8, #E0C068);
+}
+.DragonFlying {
+    background-image: linear-gradient(to left, #7038F8, #A890F0);
+}
+.DragonPsychic {
+    background-image: linear-gradient(to left, #7038F8, #F85888);
+}
+.DragonBug {
+    background-image: linear-gradient(to left, #7038F8, #A8B81F);
+}
+.DragonGhost {
+    background-image: linear-gradient(to left, #7038F8, #705898);
+}
+.DragonDark {
+    background-image: linear-gradient(to left, #7038F8, #705848);
+}
+.DragonSteel {
+    background-image: linear-gradient(to left, #7038F8, #B8B8D0);
+}
+.DragonFairy {
+    background-image: linear-gradient(to left, #7038F8, #F0B6BC);
+}
+.SteelFire {
+    background-image: linear-gradient(to left, #B8B8D0, #F08030);
+}
+.SteelWater {
+    background-image: linear-gradient(to left, #B8B8D0, #6890EF);
+}
+.SteelGrass {
+    background-image: linear-gradient(to left, #B8B8D0, #78C850);
+}
+.SteelElectric {
+    background-image: linear-gradient(to left, #B8B8D0, #F8D030);
+}
+.SteelNormal {
+    background-image: linear-gradient(to left, #B8B8D0, #A8A878);
+}
+.SteelIce {
+    background-image: linear-gradient(to left, #B8B8D0, #97D8D8);
+}
+.SteelRock {
+    background-image: linear-gradient(to left, #B8B8D0, #B7A038);
+}
+.SteelFighting {
+    background-image: linear-gradient(to left, #B8B8D0, #C03028);
+}
+.SteelPoison {
+    background-image: linear-gradient(to left, #B8B8D0, #A040A0);
+}
+.SteelGround {
+    background-image: linear-gradient(to left, #B8B8D0, #E0C068);
+}
+.SteelFlying {
+    background-image: linear-gradient(to left, #B8B8D0, #A890F0);
+}
+.SteelPsychic {
+    background-image: linear-gradient(to left, #B8B8D0, #F85888);
+}
+.SteelBug {
+    background-image: linear-gradient(to left, #B8B8D0, #A8B81F);
+}
+.SteelGhost {
+    background-image: linear-gradient(to left, #B8B8D0, #705898);
+}
+.SteelDark {
+    background-image: linear-gradient(to left, #B8B8D0, #705848);
+}
+.SteelDragon {
+    background-image: linear-gradient(to left, #B8B8D0, #7038F8);
+}
+.SteelFairy {
+    background-image: linear-gradient(to left, #B8B8D0, #F0B6BC);
+}
+.FairyFire {
+    background-image: linear-gradient(to left, #F0B6BC, #F08030);
+}
+.FairyWater {
+    background-image: linear-gradient(to left, #F0B6BC, #6890EF);
+}
+.FairyGrass {
+    background-image: linear-gradient(to left, #F0B6BC, #78C850);
+}
+.FairyElectric {
+    background-image: linear-gradient(to left, #F0B6BC, #F8D030);
+}
+.FairyNormal {
+    background-image: linear-gradient(to left, #F0B6BC, #A8A878);
+}
+.FairyIce {
+    background-image: linear-gradient(to left, #F0B6BC, #97D8D8);
+}
+.FairyRock {
+    background-image: linear-gradient(to left, #F0B6BC, #B7A038);
+}
+.FairyFighting {
+    background-image: linear-gradient(to left, #F0B6BC, #C03028);
+}
+.FairyPoison {
+    background-image: linear-gradient(to left, #F0B6BC, #A040A0);
+}
+.FairyGround {
+    background-image: linear-gradient(to left, #F0B6BC, #E0C068);
+}
+.FairyFlying {
+    background-image: linear-gradient(to left, #F0B6BC, #A890F0);
+}
+.FairyPsychic {
+    background-image: linear-gradient(to left, #F0B6BC, #F85888);
+}
+.FairyBug {
+    background-image: linear-gradient(to left, #F0B6BC, #A8B81F);
+}
+.FairyGhost {
+    background-image: linear-gradient(to left, #F0B6BC, #705898);
+}
+.FairyDark {
+    background-image: linear-gradient(to left, #F0B6BC, #705848);
+}
+.FairyDragon {
+    background-image: linear-gradient(to left, #F0B6BC, #7038F8);
+}
+.FairySteel {
+    background-image: linear-gradient(to left, #F0B6BC, #B8B8D0);
+}
