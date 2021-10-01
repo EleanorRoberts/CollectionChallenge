@@ -1,6 +1,6 @@
 <?php
 require_once 'collectionfunctions.php';
-$db = connectToDB('pokemon');
+$db = connectToDB('pokemonOld');
 $poke = getPoke($db);
 editPoke($db);
 ?>
