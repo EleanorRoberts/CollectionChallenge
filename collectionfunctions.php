@@ -10,9 +10,9 @@ function displayPoke(Array $pokemon): String {
         $output .= "<div class='pokeCard'>";
         $output .= "<h2>{$poke['name']}</h2>";
         if ($poke["type2"] === "") {
-            $output .= "<p>{$poke['type1']}</p>";
+            $output .= "<p class='type {$poke['type1']}'>{$poke['type1']}</p>";
         } else {
-            $output .= "<p>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+            $output .= "<p class='type {$poke['type1']}{$poke['type2']}'>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
         }
         $output .= '<ul>';
         $output .= "<li>HP: {$poke['hp']}</li>";
