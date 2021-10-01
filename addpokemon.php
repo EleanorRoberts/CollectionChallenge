@@ -2,6 +2,7 @@
 require_once 'collectionfunctions.php';
 $db = connectToDB('pokemon');
 $pokemon = getPokes($db);
+$types = getTypes($db);
 checkNew($db);
 ?>
 <!DOCTYPE html>
@@ -19,9 +20,17 @@ checkNew($db);
         <label for="name">Name
             <input type="text" name="name" required /></label>
         <label for="type1">First Type
-            <input type="text" name="type1" required/></label>
+            <select name="type1">
+                <?php 
+                echo makeTypesList($types);
+                ?>
+            </select></label>
         <label for="type2">Second Type
-            <input type="text" name="type2"/></label>
+            <select name="type2">
+                <?php
+                echo makeTypesList($types);
+                ?>
+            </select></label>
         <label for="hp">HP
             <input type="number" name="hp" required/></label>
         <label for="attack">Attack

@@ -11,6 +11,15 @@ h1 {
     padding: 20px 0px 10px 0px;
 }
 
+h2 {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+table {
+    margin-bottom: 10px;
+}
+
 section, footer {
     width: 80%;
     margin: 0 auto;
@@ -32,6 +41,13 @@ ul {
     padding: 0px;
 }
 
+.type {
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
 .edit, .delete {
      background-color: #FFFFFF;
      padding: 5px;
@@ -42,17 +58,20 @@ ul {
      text-align: center;
 }
 
-.speed {
-    margin-bottom: 10px;
-}
-
 .pokeCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     margin: 10px;
     padding: 10px 30px;
     width: 30%;
     background-color: #483D8B;
     color: #FFFFFF;
     border-radius: 10%;
+}
+
+th {
+    display: none;
 }
 
 .pokeCards {
