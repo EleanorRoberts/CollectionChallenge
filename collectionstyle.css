@@ -43,6 +43,9 @@ ul {
 
 .type {
     text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
 .edit, .delete {

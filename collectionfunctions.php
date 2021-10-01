@@ -10,9 +10,9 @@ function displayPoke(Array $pokemon): String {
         $output .= "<div class='pokeCard'>";
         $output .= "<h2>{$poke['name']}</h2>";
         if ($poke["type2"] == "") {
-            $output .= "<p class='type'>{$poke['type1']}</p>";
+            $output .= "<p class='type {$poke['type1']}'>{$poke['type1']}</p>";
         } else {
-            $output .= "<p class='type'>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
+            $output .= "<p class='type {$poke['type1']}{$poke['type2']}'>{$poke['type1']}" . " & " . "{$poke['type2']}</p>";
         }
         $output .= '<table>';
         $output .= '<tr><th>Stat</th><th>Value</th></tr>';
@@ -164,7 +164,7 @@ function deletePoke(PDO $database) {
  * @return array
  */
 function getTypes(PDO $database): Array {
-    $getType = $database->prepare('SELECT `id`, `type` FROM `types`');
+    $getType = $database->prepare('SELECT `id`, `type`, `colour` FROM `types`');
     $getType->execute();
     return $getType->fetchAll();
 }
@@ -177,6 +177,28 @@ function makeTypesList(Array $typesArray): String {
     $output = '';
     foreach ($typesArray as $type) {
         $output .= "<option value='{$type['id']}'>{$type['type']}</option>";
+    }
+    return $output;
+}
+
+function makeSingle($types) {
+    $output = '';
+    foreach ($types as $type) {
+        $output .= ".{$type['type']} {background-color: {$type['colour']};}";
+    }
+    return $output;
+}
+
+function makeCouple($types1, $types2) {
+    $output = '';
+    foreach ($types1 as $type1) {
+        foreach ($types2 as $type2)
+            if ($type1 === $type2) {
+                continue;
+            } else {
+                $output .= ".{$type1['type']}{$type2['type']} {background-image: linear-gradient(to right, {$type1['colour']}, {$type2['colour']});}";
+
+            }
     }
     return $output;
 }
